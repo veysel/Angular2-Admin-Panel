@@ -18,16 +18,4 @@ export class HomeComponent implements OnInit {
 
     ngOnInit() { }
 
-    public getData() {
-        this._testService.getApiData().subscribe(x => {
-            let tempModel: Test2Model = x;
-            this.testText = tempModel.id + "\n";
-            this.testText += tempModel.ad + "\n";
-            this.testText += tempModel.sifre + "\n";
-            this.testText += tempModel.durum + "\n";
-            console.log(x);
-        });
-        //this.testText = this._testService.getApiData();
-    }
-
 }
