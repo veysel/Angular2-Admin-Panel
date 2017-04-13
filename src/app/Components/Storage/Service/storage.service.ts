@@ -22,4 +22,8 @@ export class StorageService {
         localStorage.removeItem(this.loginDataName);
     }
 
+    public checkStorage() {
+        return this.getStorage() ? true : false;
+    }
+
 }
