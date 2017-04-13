@@ -21,4 +21,8 @@ export class LoginComponent implements OnInit {
         this._userService.getUserList().subscribe(res => { this.userList = res.list; });
     }
 
+    public loginSubmit() {
+        console.log(this.userList);
+    }
+
 }
