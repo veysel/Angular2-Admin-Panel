@@ -3,4 +3,5 @@ export class UserModel {
     Username: string;
     FirstName: string;
     LastName: string;
+    Password: string; // For Test :)
 }

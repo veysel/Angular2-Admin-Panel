@@ -7,4 +7,8 @@ import 'rxjs/add/operator/map';
 @Injectable()
 export class CommonService {
 
+    public getUserListApiUrl() {
+        return "https://api.myjson.com/bins/q2i23";
+    }
+
 }
