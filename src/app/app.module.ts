@@ -25,6 +25,7 @@ import { TestComponent } from './Components/Other/Test/test.component';
 import { TestService } from './Components/Common/Service/test.service';
 import { CommonService } from './Components/Common/Service/common.service';
 import { UserService } from './Components/Main/Login/Service/user.service';
+import { StorageService } from './Components/Storage/Service/storage.service';
 
 @NgModule({
   declarations: [
@@ -50,7 +51,8 @@ import { UserService } from './Components/Main/Login/Service/user.service';
   providers: [
     TestService,
     CommonService,
-    UserService
+    UserService,
+    StorageService
   ],
   bootstrap: [AppComponent]
 })
