@@ -22,8 +22,9 @@ import { Error404Component } from './Components/Other/Error/Error404/error_404.c
 import { Error500Component } from './Components/Other/Error/Error500/error_500.component';
 import { TestComponent } from './Components/Other/Test/test.component';
 
-import { TestService } from './Components/Common/Service/test.service'
-import { CommonService } from './Components/Common/Service/common.service'
+import { TestService } from './Components/Common/Service/test.service';
+import { CommonService } from './Components/Common/Service/common.service';
+import { UserService } from './Components/Main/Login/Service/user.service';
 
 @NgModule({
   declarations: [
@@ -48,7 +49,8 @@ import { CommonService } from './Components/Common/Service/common.service'
   ],
   providers: [
     TestService,
-    CommonService
+    CommonService,
+    UserService
   ],
   bootstrap: [AppComponent]
 })
