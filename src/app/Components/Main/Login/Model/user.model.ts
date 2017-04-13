@@ -3,5 +3,6 @@ export class UserModel {
     Username: string;
     FirstName: string;
     LastName: string;
+    Email: string;
     Password: string; // For Test :)
 }

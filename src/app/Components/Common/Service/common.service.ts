@@ -8,7 +8,7 @@ import 'rxjs/add/operator/map';
 export class CommonService {
 
     public getUserListApiUrl() {
-        return "https://api.myjson.com/bins/q2i23";
+        return "https://api.myjson.com/bins/zo8tf";
     }
 
 }
