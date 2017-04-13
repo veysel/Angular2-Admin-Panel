@@ -3,6 +3,7 @@ import { Component, OnInit } from '@angular/core';
 import { UserModel } from './Model/user.model';
 
 import { UserService } from './Service/user.service';
+import { StorageService } from '../../Storage/Service/storage.service';
 
 @Component({
     selector: 'login',
@@ -14,7 +15,8 @@ export class LoginComponent implements OnInit {
     public Password: string = "";
 
     constructor(
-        private _userService: UserService
+        private _userService: UserService,
+        private _storageService: StorageService
     ) {
         this.userList = new Array<UserModel>();
     }
@@ -25,12 +27,15 @@ export class LoginComponent implements OnInit {
 
     public loginSubmit() {
         let tempArray = this.userList.filter(data => data.Username == this.Username && data.Password == this.Password);
-        if (tempArray.length > 0)
-            console.log(true);
-        else
-            console.log(false);
+        if (tempArray.length < 1)
+            return;
 
-        
+        let tempModel = tempArray[0];
+        tempModel.Password = "erdal_bakkal";
+        this._storageService.setStorage(tempModel);
+
+
+
     }
 
 }
