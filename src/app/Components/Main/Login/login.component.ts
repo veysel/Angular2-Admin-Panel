@@ -10,6 +10,8 @@ import { UserService } from './Service/user.service';
 })
 export class LoginComponent implements OnInit {
     public userList: Array<UserModel>;
+    public Username: string = "";
+    public Password: string = "";
 
     constructor(
         private _userService: UserService
@@ -22,7 +24,13 @@ export class LoginComponent implements OnInit {
     }
 
     public loginSubmit() {
-        console.log(this.userList);
+        let tempArray = this.userList.filter(data => data.Username == this.Username && data.Password == this.Password);
+        if (tempArray.length > 0)
+            console.log(true);
+        else
+            console.log(false);
+
+        
     }
 
 }
