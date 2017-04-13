@@ -23,6 +23,7 @@ import { Error500Component } from './Components/Other/Error/Error500/error_500.c
 import { TestComponent } from './Components/Other/Test/test.component';
 
 import { TestService } from './Components/Common/Service/test.service'
+import { CommonService } from './Components/Common/Service/common.service'
 
 @NgModule({
   declarations: [
@@ -46,7 +47,8 @@ import { TestService } from './Components/Common/Service/test.service'
     RouterModule.forRoot(routes, {})
   ],
   providers: [
-    TestService
+    TestService,
+    CommonService
   ],
   bootstrap: [AppComponent]
 })
