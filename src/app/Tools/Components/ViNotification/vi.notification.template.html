@@ -1,10 +1,10 @@
-<div id="gritter-notice-wrapper">
-    <div id="gritter-item-37" class="gritter-item-wrapper hover" style="">
+<div id="gritter-notice-wrapper" *ngIf="notificationState" >
+    <div id="gritter-item-37" class="gritter-item-wrapper">
         <div class="gritter-top"></div>
         <div class="gritter-item">
-            <div class="gritter-close" style="display: block;"></div>
-            <div class="gritter-without-image"><span class="gritter-title">Hata</span>
-                <p>Lütfen Giriş Yapınız !</p>
+            <div (click)="close()" class="gritter-close" style="display: block;"></div>
+            <div class="gritter-without-image"><span class="gritter-title">{{titleText}}</span>
+                <p>{{contentText}}</p>
             </div>
             <div style="clear:both"></div>
         </div>
