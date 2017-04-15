@@ -4,13 +4,13 @@ import { Observable } from 'rxjs/Rx';
 
 import 'rxjs/add/operator/map';
 
-import { ViNotificationComponent } from '../../../Tools/Components/ViNotification/vi.notification.component';
+// import { ViNotificationComponent } from '../../../Tools/Components/ViNotification/vi.notification.component';
 
 @Injectable()
 export class CommonService {
 
     constructor(
-        private _viNotificationComponent: ViNotificationComponent
+        // private _viNotificationComponent: ViNotificationComponent
     ) { }
 
     public getUserListApiUrl() {
@@ -18,7 +18,7 @@ export class CommonService {
     }
 
     public showNotification(titleText: string, contentText: string) {
-        this._viNotificationComponent.showNotification(titleText, contentText);
+        // this._viNotificationComponent.showNotification(titleText, contentText);
     }
 
 }
