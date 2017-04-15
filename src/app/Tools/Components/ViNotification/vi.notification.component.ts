@@ -6,11 +6,13 @@ import { Component, OnInit } from '@angular/core';
 })
 
 export class ViNotificationComponent implements OnInit {
-    private contentText = "";
-    private titleText = "";
-    private notificationState = false;
+    private contentText: string;
+    private titleText: string;
+    private notificationState: boolean;
 
-    constructor() { }
+    constructor() {
+        this.close();
+    }
 
     ngOnInit() {
 
@@ -18,6 +20,8 @@ export class ViNotificationComponent implements OnInit {
 
     private close() {
         this.notificationState = false;
+        this.titleText = "";
+        this.contentText = "";
     }
 
     private autoClose() {
