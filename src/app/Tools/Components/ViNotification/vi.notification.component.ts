@@ -21,13 +21,13 @@ export class ViNotificationComponent implements OnInit {
     }
 
     private autoClose() {
-        setTimeout(this.close(), 2000);
+        setTimeout(x => { this.close(); }, 1000);
     }
 
     public showNotification(titleText: string, contentText: string) {
+        this.notificationState = true;
         this.titleText = titleText;
         this.contentText = contentText;
-        this.notificationState = true;
-        // this.autoClose();
+        this.autoClose();
     }
 }
