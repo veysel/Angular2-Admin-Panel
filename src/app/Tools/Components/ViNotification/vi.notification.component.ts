@@ -28,6 +28,6 @@ export class ViNotificationComponent implements OnInit {
         this.titleText = titleText;
         this.contentText = contentText;
         this.notificationState = true;
-        this.autoClose();
+        // this.autoClose();
     }
 }
