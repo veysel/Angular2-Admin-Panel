@@ -14,4 +14,8 @@ export class CommonService {
         return "https://api.myjson.com/bins/zo8tf";
     }
 
+    public getSearchListApiUrl() {
+        return "";
+    }
+
 }

@@ -29,6 +29,7 @@ import { TestService } from './Components/Common/Service/test.service';
 import { CommonService } from './Components/Common/Service/common.service';
 import { UserService } from './Components/Main/Login/Service/user.service';
 import { StorageService } from './Components/Storage/Service/storage.service';
+import { SearchService } from './Components/Main/Panel/Page/Search/Service/search.service';
 
 @NgModule({
   declarations: [
@@ -57,7 +58,8 @@ import { StorageService } from './Components/Storage/Service/storage.service';
     TestService,
     CommonService,
     UserService,
-    StorageService
+    StorageService,
+    SearchService
   ],
   bootstrap: [AppComponent]
 })
