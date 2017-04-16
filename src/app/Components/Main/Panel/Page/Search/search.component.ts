@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 
 @Component({
@@ -7,6 +7,7 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class SearchComponent implements OnInit {
     private result: string;
+    private routeSubscribe: any;
 
     constructor(
         private _activatedRoute: ActivatedRoute
@@ -15,8 +16,12 @@ export class SearchComponent implements OnInit {
     }
 
     ngOnInit() {
-        this._activatedRoute.params.subscribe(params => {
+        this.routeSubscribe = this._activatedRoute.params.subscribe(params => {
             this.result = params['text'];
         });
+    }
+
+    ngOnDestroy() {
+        this.routeSubscribe.unsubscribe();
     }
 }
