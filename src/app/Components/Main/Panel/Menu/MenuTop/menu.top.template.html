@@ -33,7 +33,7 @@
 <!--close-top-Header-menu-->
 <!--start-top-serch-->
 <div id="search">
-    <input type="text" placeholder="Arama Yap..." />
-    <button type="submit" class="tip-bottom" title="Ara"><i class="icon-search icon-white"></i></button>
+    <input [(ngModel)]="searchText" type="text" placeholder="Arama Yap..." />
+    <button [routerLink]="['/main/panel/page/search', searchText]" type="button" class="tip-bottom" title="Ara"><i class="icon-search icon-white"></i></button>
 </div>
 <!--close-top-serch-->

@@ -10,6 +10,7 @@ import { MenuLeftComponent } from './Components/Main/Panel/Menu/MenuLeft/menu.le
 import { MenuBottomComponent } from './Components/Main/Panel/Menu/MenuBottom/menu.bottom.component';
 import { HomeComponent } from './Components/Main/Panel/Home/home.component';
 import { KategoriComponent } from './Components/Main/Panel/Page/Kategori/kategori.component';
+import { SearchComponent } from './Components/Main/Panel/Page/Search/search.component';
 
 import { Error404Component } from './Components/Other/Error/Error404/error_404.component';
 import { Error500Component } from './Components/Other/Error/Error500/error_500.component';
@@ -43,6 +44,7 @@ export const routes: Routes = [
             children: [
               { path: '', redirectTo: '/other/error/404', pathMatch: 'full' },
               { path: 'kategori', component: KategoriComponent },
+              { path: 'search/:text', component: SearchComponent },
             ]
           }
         ]

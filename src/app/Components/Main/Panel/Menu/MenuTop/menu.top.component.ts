@@ -5,6 +5,8 @@ import { Component, OnInit } from '@angular/core';
     templateUrl: 'menu.top.template.html'
 })
 export class MenuTopComponent implements OnInit {
+    public searchText = "";
+
     constructor() { }
 
     ngOnInit() { }

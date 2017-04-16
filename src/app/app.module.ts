@@ -17,6 +17,7 @@ import { MenuLeftComponent } from './Components/Main/Panel/Menu/MenuLeft/menu.le
 import { MenuBottomComponent } from './Components/Main/Panel/Menu/MenuBottom/menu.bottom.component';
 import { HomeComponent } from './Components/Main/Panel/Home/home.component';
 import { KategoriComponent } from './Components/Main/Panel/Page/Kategori/kategori.component';
+import { SearchComponent } from './Components/Main/Panel/Page/Search/search.component';
 
 import { Error404Component } from './Components/Other/Error/Error404/error_404.component';
 import { Error500Component } from './Components/Other/Error/Error500/error_500.component';
@@ -43,7 +44,8 @@ import { StorageService } from './Components/Storage/Service/storage.service';
     Error404Component,
     Error500Component,
     TestComponent,
-    ViNotificationComponent
+    ViNotificationComponent,
+    SearchComponent
   ],
   imports: [
     BrowserModule,
