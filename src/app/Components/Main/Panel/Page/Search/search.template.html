@@ -1,9 +1,26 @@
 <div id="content-header">
     <div id="breadcrumb"> <a href="/main/panel/home" title="Ana Sayfaya Git" class="tip-bottom"><i class="icon-home"></i> Ana Sayfa</a></div>
 </div>
+<div>
+    <div class="container-fluid">
+        <div class="row-fluid">
+            <div class="span12">
+                <div class="widget-box">
+                    <div class="widget-title bg_ly" data-toggle="collapse" href="#collapseG2"><span class="icon"><i class="icon-chevron-down"></i></span>
+                        <h5>Aranılan Kelime : "{{result}}"</h5>
+                    </div>
+                    <div class="widget-content nopadding collapse in" id="collapseG2">
+                        <ul class="recent-posts">
+                            <li *ngFor="let i of resultList">
+                                <div class="article-post"> <span class="user-info"> Search Id : {{i.SearchId}} </span>
+                                    <p><a href="{{i.SearchUrl}}">{{i.SearchText}}</a>                                        </p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
 
-Aranılan Kelime : "{{result}}"
-<br>
-<div *ngFor="let i of resultList">
-    {{i.SearchText}}
+            </div>
+        </div>
+    </div>
 </div>
