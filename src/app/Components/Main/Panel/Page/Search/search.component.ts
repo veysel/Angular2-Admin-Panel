@@ -13,11 +13,13 @@ export class SearchComponent implements OnInit {
     private result: string;
     private routeSubscribe: any;
     private searchList: Array<SearchModel>;
+    private resultList: Array<SearchModel>;
 
     constructor(
         private _activatedRoute: ActivatedRoute,
         private _searchService: SearchService
     ) {
+        this.resultList = new Array<SearchModel>();
         this.searchList = new Array<SearchModel>();
         this._searchService.getSearchList().subscribe(data => { this.searchList = data; });
     }
@@ -25,11 +27,16 @@ export class SearchComponent implements OnInit {
     ngOnInit() {
         this.routeSubscribe = this._activatedRoute.params.subscribe(params => {
             this.result = params['text'];
+            this.search(this.result);
         });
     }
 
     ngOnDestroy() {
         this.routeSubscribe.unsubscribe();
+    }
+
+    private search(searchText: string) {
+        this.resultList = this.searchList.filter(x => x.SearchText.search(searchText));
     }
 
 
