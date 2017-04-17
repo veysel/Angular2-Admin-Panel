@@ -36,7 +36,7 @@ export class SearchComponent implements OnInit {
     }
 
     private search(searchText: string) {
-        this.resultList = this.searchList.filter(x => x.SearchText.search(searchText));
+        this.resultList = this.searchList.filter(x => x.SearchText.toLowerCase().match(searchText.toLowerCase()));
     }
 
 
