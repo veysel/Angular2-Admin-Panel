@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 import { UserModel } from './Model/user.model';
 
@@ -16,7 +17,8 @@ export class LoginComponent implements OnInit {
 
     constructor(
         private _userService: UserService,
-        private _storageService: StorageService
+        private _storageService: StorageService,
+        private _router: Router
     ) {
         this.userList = new Array<UserModel>();
     }
@@ -27,15 +29,15 @@ export class LoginComponent implements OnInit {
 
     public loginSubmit() {
         let tempArray = this.userList.filter(data => data.Username == this.Username && data.Password == this.Password);
-        if (tempArray.length < 1)
+        if (tempArray.length < 1) {
+            alert("Bilgiler yanlış !");
             return;
+        }
 
         let tempModel = tempArray[0];
         tempModel.Password = "erdal_bakkal";
         this._storageService.setStorage(tempModel);
-
-
-
+        this._router.navigate(["/main/panel"]);
     }
 
 }

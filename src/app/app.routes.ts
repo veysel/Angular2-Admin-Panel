@@ -16,8 +16,10 @@ import { Error404Component } from './Components/Other/Error/Error404/error_404.c
 import { Error500Component } from './Components/Other/Error/Error500/error_500.component';
 import { TestComponent } from './Components/Other/Test/test.component';
 
+import { AuthGuardCanActivate } from './Components/AuthGuard/Activate/auth.guard.can.activate';
+
 export const routes: Routes = [
-  { path: '', component: DefaultComponent },
+  { path: '', component: DefaultComponent, canActivate: [AuthGuardCanActivate] },
   {
     path: 'main',
     children: [
@@ -28,6 +30,7 @@ export const routes: Routes = [
       },
       {
         path: 'panel',
+        canActivate: [AuthGuardCanActivate],
         component: PanelComponent,
         children: [
           {

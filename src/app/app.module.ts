@@ -31,6 +31,8 @@ import { UserService } from './Components/Main/Login/Service/user.service';
 import { StorageService } from './Components/Storage/Service/storage.service';
 import { SearchService } from './Components/Main/Panel/Page/Search/Service/search.service';
 
+import { AuthGuardCanActivate } from './Components/AuthGuard/Activate/auth.guard.can.activate';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -59,7 +61,8 @@ import { SearchService } from './Components/Main/Panel/Page/Search/Service/searc
     CommonService,
     UserService,
     StorageService,
-    SearchService
+    SearchService,
+    AuthGuardCanActivate
   ],
   bootstrap: [AppComponent]
 })
