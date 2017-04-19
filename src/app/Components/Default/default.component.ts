@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 import { CommonService } from '../Common/Service/common.service';
 
@@ -8,9 +9,12 @@ import { CommonService } from '../Common/Service/common.service';
 })
 export class DefaultComponent implements OnInit {
     constructor(
-        private _commonService: CommonService
+        private _commonService: CommonService,
+        private _router: Router
     ) { }
 
-    ngOnInit() { }
+    ngOnInit() {
+        this._router.navigate(["/main/panel"]);
+    }
 
 }

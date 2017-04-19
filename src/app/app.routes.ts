@@ -19,7 +19,7 @@ import { TestComponent } from './Components/Other/Test/test.component';
 import { AuthGuardCanActivate } from './Components/AuthGuard/Activate/auth.guard.can.activate';
 
 export const routes: Routes = [
-  { path: '', component: DefaultComponent, canActivate: [AuthGuardCanActivate] },
+  { path: '', component: DefaultComponent },
   {
     path: 'main',
     children: [

@@ -24,6 +24,9 @@ export class LoginComponent implements OnInit {
     }
 
     ngOnInit() {
+        if (this._storageService.checkStorage())
+            this._router.navigate(["/main/panel"]);
+
         this._userService.getUserList().subscribe(res => { this.userList = res.list; });
     }
 
