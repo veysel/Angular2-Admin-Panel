@@ -8,16 +8,16 @@
         <div class="control-group">
             <div class="controls">
                 <div class="main_input_box">
-                    <span class="add-on bg_lg"><i class="icon-user"> </i></span><input [(ngModel)]="Username" type="text" placeholder="Kullanıcı Adı"
-                    />
+                    <span class="add-on bg_lg"><i class="icon-user"> </i></span><input [(ngModel)]="Username" (keyup.enter)="loginSubmit()"
+                        type="text" placeholder="Kullanıcı Adı" />
                 </div>
             </div>
         </div>
         <div class="control-group">
             <div class="controls">
                 <div class="main_input_box">
-                    <span class="add-on bg_ly"><i class="icon-lock"></i></span><input [(ngModel)]="Password" type="password" placeholder="Şifre"
-                    />
+                    <span class="add-on bg_ly"><i class="icon-lock"></i></span><input [(ngModel)]="Password" (keyup.enter)="loginSubmit()"
+                        type="password" placeholder="Şifre" />
                 </div>
             </div>
         </div>
