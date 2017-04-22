@@ -5,6 +5,8 @@ import { Component, OnInit } from '@angular/core';
     templateUrl: 'menu.left.template.html'
 })
 export class MenuLeftComponent implements OnInit {
+    private percentage = 37;
+
     constructor() { }
 
     ngOnInit() { }
