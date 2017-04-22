@@ -5,9 +5,11 @@ import { Component, OnInit } from '@angular/core';
     templateUrl: 'menu.left.template.html'
 })
 export class MenuLeftComponent implements OnInit {
-    private percentage = 37;
+    private percentage: number;
 
     constructor() { }
 
-    ngOnInit() { }
+    ngOnInit() {
+        this.percentage = 38;
+    }
 }
