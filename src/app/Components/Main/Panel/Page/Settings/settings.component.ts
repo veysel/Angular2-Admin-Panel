@@ -13,7 +13,9 @@ export class SettingsComponent implements OnInit {
 
     constructor(
         private _userService: UserService
-    ) { }
+    ) {
+        this.userList = new Array<UserModel>();
+    }
 
     ngOnInit() {
         this._userService.getUserList().subscribe(res => { this.userList = res.list; });
