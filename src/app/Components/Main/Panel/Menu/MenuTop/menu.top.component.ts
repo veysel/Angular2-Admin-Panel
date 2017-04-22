@@ -32,4 +32,8 @@ export class MenuTopComponent implements OnInit {
         this._storageService.clearStorage();
         this._router.navigate(["/main/login"]);
     }
+
+    private goToSettings() {
+        this._router.navigate(["/main/panel/page/settings"]);
+    }
 }
