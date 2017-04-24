@@ -1,43 +1,39 @@
-<br>
-<br>
-<div id="loginbox">
-    <div id="loginform" class="form-vertical">
-        <div class="control-group normal_text">
-            <h3><img src="/src/tema/img/logo.png" alt="Logo" /></h3>
+<div>
+    <div>
+        <div>
+            <h3><img src="" alt="Logo" /></h3>
         </div>
-        <div class="control-group">
-            <div class="controls">
-                <div class="main_input_box">
-                    <span class="add-on bg_lg"><i class="icon-user"> </i></span><input [(ngModel)]="Username" (keyup.enter)="loginSubmit()"
-                        type="text" placeholder="Kullanıcı Adı" />
+        <div>
+            <div>
+                <div>
+                    <input [(ngModel)]="Username" (keyup.enter)="loginSubmit()" type="text" placeholder="Kullanıcı Adı" />
                 </div>
             </div>
         </div>
-        <div class="control-group">
-            <div class="controls">
-                <div class="main_input_box">
-                    <span class="add-on bg_ly"><i class="icon-lock"></i></span><input [(ngModel)]="Password" (keyup.enter)="loginSubmit()"
-                        type="password" placeholder="Şifre" />
+        <div>
+            <div>
+                <div>
+                    <input [(ngModel)]="Password" (keyup.enter)="loginSubmit()" type="password" placeholder="Şifre" />
                 </div>
             </div>
         </div>
-        <div class="form-actions">
-            <span class="pull-left"><a class="flip-link btn btn-info" id="to-recover">Şifremi Unuttum</a></span>
-            <span class="pull-right"><a (click)="loginSubmit()" class="btn btn-success"> Giriş</a></span>
+        <div>
+            <span class="pull-left"><a>Şifremi Unuttum</a></span>
+            <span class="pull-right"><a (click)="loginSubmit()">Giriş</a></span>
         </div>
     </div>
-    <form id="recoverform" class="form-vertical">
-        <p class="normal_text">Yeni şifren mail adresine gönderilecektir.</p>
+    <div>
+        <p>Yeni şifren mail adresine gönderilecektir.</p>
 
-        <div class="controls">
-            <div class="main_input_box">
-                <span class="add-on bg_lo"><i class="icon-envelope"></i></span><input type="text" placeholder="E-mail" />
+        <div>
+            <div>
+                <input type="text" placeholder="E-mail" />
             </div>
         </div>
 
-        <div class="form-actions">
-            <span class="pull-left"><a class="flip-link btn btn-success" id="to-login">&laquo; Giriş Sayfasına Dön</a></span>
-            <span class="pull-right"><a class="btn btn-info">Gönder</a></span>
+        <div>
+            <span class="pull-left"><a >&laquo; Giriş Sayfasına Dön</a></span>
+            <span class="pull-right"><a>Gönder</a></span>
         </div>
-    </form>
+    </div>
 </div>
