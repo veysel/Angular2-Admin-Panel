@@ -1,39 +1,23 @@
 <div>
     <div>
-        <div>
-            <h3><img src="" alt="Logo" /></h3>
-        </div>
-        <div>
-            <div>
-                <div>
-                    <input [(ngModel)]="Username" (keyup.enter)="loginSubmit()" type="text" placeholder="Kullanıcı Adı" />
-                </div>
-            </div>
-        </div>
+        <h3><img src="" alt="Logo" /></h3>
+    </div>
+    <div>
         <div>
             <div>
-                <div>
-                    <input [(ngModel)]="Password" (keyup.enter)="loginSubmit()" type="password" placeholder="Şifre" />
-                </div>
+                <input [(ngModel)]="Username" (keyup.enter)="loginSubmit()" type="text" placeholder="Kullanıcı Adı" />
             </div>
-        </div>
-        <div>
-            <span class="pull-left"><a>Şifremi Unuttum</a></span>
-            <span class="pull-right"><a (click)="loginSubmit()">Giriş</a></span>
         </div>
     </div>
     <div>
-        <p>Yeni şifren mail adresine gönderilecektir.</p>
-
         <div>
             <div>
-                <input type="text" placeholder="E-mail" />
+                <input [(ngModel)]="Password" (keyup.enter)="loginSubmit()" type="password" placeholder="Şifre" />
             </div>
         </div>
-
-        <div>
-            <span class="pull-left"><a >&laquo; Giriş Sayfasına Dön</a></span>
-            <span class="pull-right"><a>Gönder</a></span>
-        </div>
+    </div>
+    <div>
+        <span class="pull-left"><a>Şifremi Unuttum</a></span>
+        <span class="pull-right"><a (click)="loginSubmit()">Giriş</a></span>
     </div>
 </div>
