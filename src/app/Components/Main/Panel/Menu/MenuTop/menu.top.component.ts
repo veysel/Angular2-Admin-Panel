@@ -10,7 +10,6 @@ import { UserModel } from '../../../Login/Model/user.model';
     templateUrl: 'menu.top.template.html'
 })
 export class MenuTopComponent implements OnInit {
-    public searchText = "";
     private userModel: UserModel;
 
     constructor(
@@ -22,10 +21,6 @@ export class MenuTopComponent implements OnInit {
 
     ngOnInit() {
         this.userModel = this._storageService.getStorage();
-    }
-
-    private goToSearch() {
-        this._router.navigate(['/main/panel/page/search', this.searchText]);
     }
 
     private logout() {
