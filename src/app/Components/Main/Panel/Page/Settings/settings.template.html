@@ -1,3 +1,64 @@
-<div>
-    Settings Page
-</div>
+<section class="content-header">
+    <h1>
+        Ayarlar
+        <small>Profil Kontrol Paneli</small>
+    </h1>
+    <ol class="breadcrumb">
+        <li><a href="/main/panel/home"><i class="fa fa-dashboard"></i> Ana Sayfa</a></li>
+        <li>Ayarlar</li>
+    </ol>
+</section>
+
+<section class="content">
+    <div class="row">
+        <div class="col-md-3">
+            <div class="box box-primary">
+                <div class="box-body box-profile">
+                    <img class="profile-user-img img-responsive img-circle" src="/src/content/theme/dist/img/user4-128x128.jpg" alt="User profile picture">
+
+                    <h3 class="profile-username text-center">{{loginUser.FirstName}} {{loginUser.LastName}}</h3>
+
+                    <p class="text-muted text-center">{{loginUser.Email}}</p>
+
+                    <ul class="list-group list-group-unbordered">
+                        <li class="list-group-item">
+                            <b>Kullanıcı No</b> <a class="pull-right">{{loginUser.UserId}}</a>
+                        </li>
+                        <li class="list-group-item">
+                            <b>Kullanıcı Adı</b> <a class="pull-right">{{loginUser.Username}}</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-9">
+            <div class="nav-tabs-custom">
+                <ul class="nav nav-tabs">
+                    <li class="active"><a href="#userList" data-toggle="tab">Tüm Kullanıcılar</a></li>
+                </ul>
+                <div class="tab-content">
+                    <div class="active tab-pane" id="userList">
+
+                        <div class="box-body">
+                            <table class="table table-bordered">
+                                <tr>
+                                    <th>Kullanıcı Id</th>
+                                    <th>Kullanıcı Adı</th>
+                                    <th>Adı Soyadı</th>
+                                    <th>E-mail</th>
+                                </tr>
+                                <tr *ngFor="let i of userList">
+                                    <td>{{i.UserId}}</td>
+                                    <td>{{i.Username}}</td>
+                                    <td>{{i.FirstName}} {{i.LastName}}</td>
+                                    <td>{{i.Email}}</td>
+                                </tr>
+                            </table>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
