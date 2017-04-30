@@ -1,15 +1,22 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
     selector: 'menu-left',
     templateUrl: 'menu.left.template.html'
 })
 export class MenuLeftComponent implements OnInit {
-    private percentage: number;
+    private searchText = "";
 
-    constructor() { }
+    constructor(
+        private _router: Router,
+    ) { }
 
     ngOnInit() {
-        this.percentage = 38;
+
+    }
+
+    private goToSearch() {
+        this._router.navigateByUrl('/main/panel/page/search/' + this.searchText);
     }
 }
