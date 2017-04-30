@@ -1,23 +1,33 @@
 <div>
-    <div>
-        <h3><img src="" alt="Logo" /></h3>
-    </div>
-    <div>
-        <div>
-            <div>
-                <input [(ngModel)]="Username" (keyup.enter)="loginSubmit()" type="text" placeholder="Kullanıcı Adı" />
-            </div>
+    <div class="login-box">
+        <div class="login-logo">
+            <a><b>Admin</b>Demo</a>
         </div>
-    </div>
-    <div>
-        <div>
+        <div style="background-color: #e6e8ed; box-shadow: 0 0 3px 1px #b3c8fc;" class="login-box-body">
             <div>
-                <input [(ngModel)]="Password" (keyup.enter)="loginSubmit()" type="password" placeholder="Şifre" />
+                <div class="form-group has-feedback">
+                    <input [(ngModel)]="Username" (keyup.enter)="loginSubmit()" type="text" class="form-control" placeholder="Kullanıcı Adı">
+                    <span class="glyphicon glyphicon-user form-control-feedback"></span>
+                </div>
+                <div class="form-group has-feedback">
+                    <input [(ngModel)]="Password" (keyup.enter)="loginSubmit()" type="password" class="form-control" placeholder="Şifre">
+                    <span class="glyphicon glyphicon-lock form-control-feedback"></span>
+                </div>
+                <div class="row">
+                    <div class="col-xs-8">
+                        <div class="checkbox icheck">
+                            <label>
+            </label>
+                        </div>
+                    </div>
+                    <div class="col-xs-4">
+                        <button (click)="loginSubmit()" type="button" class="btn btn-primary btn-block btn-flat">Giriş Yap</button>
+                    </div>
+                </div>
             </div>
+
+            <a href="#">Şifremi Unuttum</a><br>
+            <a href="#">Kayıt Ol</a>
         </div>
-    </div>
-    <div>
-        <span class="pull-left"><a>Şifremi Unuttum</a></span>
-        <span class="pull-right"><a (click)="loginSubmit()">Giriş</a></span>
     </div>
 </div>
