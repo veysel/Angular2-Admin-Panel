@@ -1,4 +1,4 @@
-Angular 2 Admin Panel
+# Angular 2 Admin Panel
 
 ## Use
 
