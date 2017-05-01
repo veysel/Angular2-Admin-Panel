@@ -2,3 +2,8 @@
     float: none;
     margin: 0 auto;
 }
+
+.login-box-vi{
+    background-color: #e6e8ed; 
+    box-shadow: 0 0 3px 1px #b3c8fc;
+}
