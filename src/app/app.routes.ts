@@ -13,6 +13,7 @@ import { KategoriComponent } from './Components/Main/Panel/Page/Kategori/kategor
 import { SearchComponent } from './Components/Main/Panel/Page/Search/search.component';
 import { SettingsComponent } from './Components/Main/Panel/Page/Settings/settings.component';
 import { ForgotPasswordComponent } from './Components/Main/ForgotPassword/forgot.password.component';
+import { RegisterComponent } from './Components/Main/Register/register.component';
 
 import { Error404Component } from './Components/Other/Error/Error404/error_404.component';
 import { Error500Component } from './Components/Other/Error/Error500/error_500.component';
@@ -57,6 +58,7 @@ export const routes: Routes = [
       },
       { path: 'login', component: LoginComponent },
       { path: 'forgotPassword', component: ForgotPasswordComponent },
+      { path: 'register', component: RegisterComponent },
     ]
   },
   {
