@@ -14,3 +14,10 @@ ng serve
 ```
 -- Open browser url link localhost:4200
 ```
+
+## Dependencies
+
+```
+- Angular-Cli
+- AdminLTE
+```
