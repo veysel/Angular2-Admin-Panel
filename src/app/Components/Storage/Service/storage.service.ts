@@ -1,8 +1,4 @@
 import { Injectable } from '@angular/core';
-import { Http, URLSearchParams, Headers } from '@angular/http';
-import { Observable } from 'rxjs/Rx';
-
-import 'rxjs/add/operator/map';
 
 import { UserModel } from '../../Main/Login/Model/user.model';
 
