@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
+import { ViNotificationService } from './Service/vi.notification.service';
+
 @Component({
     selector: 'vi-notification',
     templateUrl: './vi.notification.template.html',
@@ -10,9 +12,14 @@ export class ViNotificationComponent implements OnInit {
     private contentText: string;
     private notificationState: boolean;
 
+    constructor(
+        private _viNotificationService: ViNotificationService
+    ) {
+        this.notificationState = this._viNotificationService.getNotificationState();
+        this.contentText = this._viNotificationService.getContentText();
+    }
+
     ngOnInit() {
-        this.notificationState = true;
-        this.contentText = "Kayıt Başarılı";
     }
 
     public showNotification(contentText: string) {

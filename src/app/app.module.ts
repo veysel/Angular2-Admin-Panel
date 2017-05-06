@@ -32,6 +32,7 @@ import { CommonService } from './Components/Common/Service/common.service';
 import { UserService } from './Components/Main/Login/Service/user.service';
 import { StorageService } from './Components/Storage/Service/storage.service';
 import { SearchService } from './Components/Main/Panel/Page/Search/Service/search.service';
+import { ViNotificationService } from './Tools/Components/ViNotification/Service/vi.notification.service';
 
 import { AuthGuardCanActivate } from './Components/AuthGuard/Activate/auth.guard.can.activate';
 
@@ -66,7 +67,8 @@ import { AuthGuardCanActivate } from './Components/AuthGuard/Activate/auth.guard
     UserService,
     StorageService,
     SearchService,
-    AuthGuardCanActivate
+    AuthGuardCanActivate,
+    ViNotificationService
   ],
   bootstrap: [AppComponent]
 })
