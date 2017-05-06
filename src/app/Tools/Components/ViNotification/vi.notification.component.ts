@@ -2,7 +2,8 @@ import { Component, OnInit } from '@angular/core';
 
 @Component({
     selector: 'vi-notification',
-    templateUrl: './vi.notification.template.html'
+    templateUrl: './vi.notification.template.html',
+    styleUrls: ['./vi.notification.style.css']
 })
 
 export class ViNotificationComponent implements OnInit {
