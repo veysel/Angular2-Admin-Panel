@@ -27,7 +27,7 @@ import { Error500Component } from './Components/Other/Error/Error500/error_500.c
 import { TestComponent } from './Components/Other/Test/test.component';
 
 import { ViNotificationComponent } from './Tools/Components/ViNotification/vi.notification.component';
-import { ViModalsComponent } from './Tools/Components/ViModals/ViNotification/vi.modals.component';
+import { ViModalsComponent } from './Tools/Components/ViModals/vi.modals.component';
 
 import { CommonService } from './Components/Common/Service/common.service';
 import { UserService } from './Components/Main/Login/Service/user.service';
