@@ -6,8 +6,8 @@ import { Component, OnInit } from '@angular/core';
 })
 
 export class ViModalsComponent implements OnInit {
-    private modalsTitle = "";
-    private modalsBody = "";
+    private modalsTitle: string;
+    private modalsBody: string;
 
     constructor() { }
 
